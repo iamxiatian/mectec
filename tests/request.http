@@ -1,0 +1,32 @@
+
+### 获取参数信息
+GET http://localhost:8000/conf
+
+### 设置参数
+POST http://localhost:8000/conf
+Content-Type: application/json
+
+{
+    "min_error_probability": 0.0,
+    "min_token_probability": 0.0,
+    "num_iterations": 2,
+    "keep_confidence": 0.0,
+    "keep_de_confidence": 0.0,
+    "del_confidence": 0.0,
+    "skip_de": false,
+    "skip_ta": false,
+    "use_selector": false,
+    "use_mask": false,
+    "use_mask_topn": 10,
+    "dtag_error_p": 0.9,
+    "batch_size":32
+}
+
+### 预测
+POST http://localhost:8000/predict_file#realise
+Content-Type: application/json
+
+{
+    "eval_file": "./data/sighan15_realise.txt"
+}
+

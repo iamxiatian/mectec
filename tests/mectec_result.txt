@@ -1,0 +1,40 @@
+HTTP/1.1 200 OK
+date: Tue, 26 Dec 2023 08:17:01 GMT
+server: uvicorn
+content-length: 877
+content-type: application/json
+Connection: close
+
+{
+  "model_name": "./model/final_best/best_stc_25_169000.pt",
+  "eval_file": "./data/sighan15_realise.txt",
+  "scores": {
+    "sent_detect_P": 0.8229755178907722,
+    "sent_detect_R": 0.8077634011090573,
+    "sent_detect_F1": 0.8152985074626865,
+    "sent_correct_P": 0.7984934086629002,
+    "sent_correct_R": 0.7837338262476895,
+    "sent_correct_F1": 0.791044776119403,
+    "token_detect_P": 0.880466472303207,
+    "token_detect_R": 0.8591749644381224,
+    "token_detect_F1": 0.8696904247660188,
+    "token_correct_P": 0.8513119533527697,
+    "token_correct_R": 0.8307254623044097,
+    "token_correct_F1": 0.8408927285817135
+  },
+  "config": {
+    "min_error_probability": 0.0,
+    "min_token_probability": 0.0,
+    "num_iterations": 2,
+    "keep_confidence": 0.0,
+    "keep_de_confidence": 0.0,
+    "del_confidence": 0.0,
+    "skip_de": false,
+    "skip_ta": false,
+    "use_selector": false,
+    "use_mask": false,
+    "use_mask_topn": 10,
+    "batch_size": 32,
+    "dtag_error_p": 0.9
+  }
+}
